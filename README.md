@@ -152,3 +152,48 @@ cloudshell:~$ docker run -it --rm -p 8080:3000 grafana/grafana
 # http://localhost:8080
 ```
 
+### gcloud desktop experience
+
+Actually you can use gcloud as remote desktop. References:
+- https://www.kadifeli.com/fedon/hint.php?cloud_gc_shell
+- https://idroot.us/install-vnc-server-debian-11/
+
+```bash
+# connect to gcloud shell with default vnc port portforwarded to your localhost
+gcloud cloud-shell ssh --ssh-flag=-L5901:127.0.0.1:5901 --ssh-flag=-oServerAliveInterval=30
+
+# Install desktop environment packages and vnc server without interactive promt
+sudo DEBIAN_FRONTEND=noninteractive apt install xfce4 xfce4-goodies vnc4server dbus-x11 -y
+
+# Create vnc password
+vncpasswd
+
+# Create vnc server config
+mkdir ~/.vnc
+cat << EOF >> ~/.vnc/xstartup
+#!/bin/bash
+export XKL_XMODMAP_DISABLE=1
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+vncconfig -iconic &
+startxfce4
+EOF
+
+# Start vnc server
+vncserver -localhost
+
+# Install VNC client on your local machine and use it to connect to localhost:5901
+# I have succesfully tested https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=cs&gl=US  on my S10 phone 
+
+# Stop vnc server
+vncserver -kill :1
+
+```
+
+
+
+
+
