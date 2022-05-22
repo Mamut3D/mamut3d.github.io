@@ -68,8 +68,12 @@ TODO console autocomplete
 ## Termux
 
 ```bash
-# Disable termux bell, use only once ;-)
+# Termux config, use only once or edit the cat  ;-)
+
 cat << EOF >> ~/.termux/termux.properties
+# Disable termux bell
 bell-character=ignore
+# Disable additional keys for termux
+extra-keys = []
 EOF
 ```
