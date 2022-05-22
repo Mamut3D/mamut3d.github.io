@@ -71,7 +71,7 @@ set mouse-=a
 " highlight syntax
 syntax on
 " disable the swapfile
-set noswapfile 
+set noswapfile
 " highlight all results
 set hlsearch
 " ignore case in search
@@ -80,6 +80,10 @@ set ignorecase
 set incsearch
 " set jk as ESC alternative
 inoremap jk <ESC>
+" remove trailing whitespaces on save https://vim.fandom.com/wiki/Remove_unwanted_spaces
+autocmd BufWritePre * :%s/\s\+$//e
+" replace selected text in visual with regexp https://stackoverflow.com/questions/676600/vim-search-and-replace-selected-text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 EOF
 ```
 
@@ -136,8 +140,8 @@ gcloud auth login --activate --no-launch-browser
 #
 # Yay :-)
 
-# Connect to your free google cloud shell 
-# Ephemeral Debian vm with 4vCPU and 16GB ram 
+# Connect to your free google cloud shell
+# Ephemeral Debian vm with 4vCPU and 16GB ram
 #
 # Additional stuff:
 # - flags for keepalive are sent, so your VM won't die due to inactivity in around 10m
@@ -186,7 +190,7 @@ EOF
 vncserver -localhost
 
 # Install VNC client on your local machine and use it to connect to localhost:5901
-# I have succesfully tested https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=cs&gl=US  on my S10 phone 
+# I have succesfully tested https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=cs&gl=US  on my S10 phone
 
 # Stop vnc server
 vncserver -kill :1
