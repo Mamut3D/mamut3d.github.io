@@ -19,11 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: KB
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: >-
+  Just a personal KB to store stuff and not relearn it 1000x.
 #twitter_username: jekyllrb
 github_username:  mamut3d
 domain: mamut3d.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
