@@ -18,19 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: KB
+title: HopeHarder
 description: >-
   Just a personal KB to store stuff and not relearn it 1000x.
 #twitter_username: jekyllrb
 github_username:  mamut3d
 domain: mamut3d.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://mamut3d.github.io  # the base hostname and protocol for your site, e.g. http://example.com
-# baseurl: /mamut3d/docs      # place folder name if the site is served in a subfolder
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+#plugins:
+#  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

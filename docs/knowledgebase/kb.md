@@ -7,8 +7,8 @@ title:  "Personal KB"
 
 - Allow app install from unknown sources
   - Settings -> Apps -> ... -> Special access -> Install unknown apps -> Enable `your browser`
-- Install Termux from (dl via browser for me) https://f-droid.org/en/packages/com.termux
-- Install Termux-api from (dl via browser for me) https://f-droid.org/en/packages/com.termux.api/
+- Install Termux from (via browser for me) https://f-droid.org/en/packages/com.termux
+- Install Termux-api from ( via browser for me) https://f-droid.org/en/packages/com.termux.api/
 - Test packages for viruses at https://www.virustotal.com/gui/home/url
 - Disable installation of apps from unknown sources
   - Settings -> Apps -> ... -> Special access -> Install unknown apps -> Disable `your browser`
@@ -63,6 +63,14 @@ EOF
 
 ## Vim
 
+- prepare folders for spellcheck
+
+```bash
+mkdir -p ~/.vim/spell
+```
+
+- configure vim
+
 ```bash
 cat << EOF > ~/.vimrc
 " Disable mouse select
@@ -86,7 +94,33 @@ inoremap jk <ESC>
 autocmd BufWritePre * :%s/\s\+$//e
 " replace selected text in visual with regexp https://stackoverflow.com/questions/676600/vim-search-and-replace-selected-text
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+" point to additional words for spellchecking
+set spellfile=~/.vim/spell/en.utf-8.add
 EOF
+```
+
+### Spell checking
+
+- Spellcheck tips were taken from [here](https://linuxhint.com/vim_spell_check/)
+
+```console
+# Enable spell checking in vim
+:set spell
+
+# Disable spell checking in vim
+:set nospell
+
+# Move to next misspelled word
+]s
+
+# Move to previous misspelled word
+[s
+
+# Add word to local spell file (when hovering over misspelled word)
+zg
+
+# Select word from dictionary (when hovering over misspelled word)
+z=
 ```
 
 ## Python
@@ -218,8 +252,8 @@ vim <Filename>
 ## GitHub pages links
 
 - [Repo prep](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
-- [Local jekill test](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+- [Local jekyll test](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
   - download gems `cd docs && bundle install`
   - Test locally on termux requires fix at `vim /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/jekyll-3.9.2/lib/jekyll/utils/platforms.rb` according to <https://github.com/jekyll/jekyll/issues/7045>
-  - also onw more fix allready present in this repo Gemfile <https://github.com/jekyll/jekyll/issues/8523>
+  - also one more fix all ready present in this repo Gemfile <https://github.com/jekyll/jekyll/issues/8523>
   - serve pages locally `bundle exec jekyll serve --host 0.0.0.0.`
