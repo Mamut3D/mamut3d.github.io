@@ -2,6 +2,25 @@
 layout: page
 title:  "Personal KB"
 ---
+
+## TOC
+
+<!-- vim-markdown-toc GFM -->
+
+* [Termux](#termux)
+* [Bashrc](#bashrc)
+* [Vim](#vim)
+	* [Spell checking](#spell-checking)
+	* [TOC plugin for MD files](#toc-plugin-for-md-files)
+* [Python](#python)
+* [Termux](#termux-1)
+* [gcloud](#gcloud)
+	* [gcloud desktop experience](#gcloud-desktop-experience)
+* [Hex editor](#hex-editor)
+* [GitHub pages links](#github-pages-links)
+
+<!-- vim-markdown-toc -->
+
 ## Termux
 
 
@@ -96,6 +115,15 @@ autocmd BufWritePre * :%s/\s\+$//e
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " point to additional words for spellchecking
 set spellfile=~/.vim/spell/en.utf-8.add
+
+" enable vim-plugin
+call plug#begin('~/.vim/plugged')
+
+Plug 'mzlogin/vim-markdown-toc'
+
+" Initialize plugin system
+call plug#end()
+
 EOF
 ```
 
@@ -121,6 +149,28 @@ zg
 
 # Select word from dictionary (when hovering over misspelled word)
 z=
+```
+
+### TOC plugin for MD files
+
+First of all we need some plugin manager. Let's start with [vim-plug](https://github.com/junegunn/vim-plug).
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Restart vim and install [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc) plugin.
+The following section should be already in `~/.vimrc` from the section above.
+
+```console
+# Start vim and install plugins defined in ~/.vimrc
+
+$ vim
+:PlugInstall
+
+# Open some md file in vim and generate TOC
+:GenTocGFM
 ```
 
 ## Python
