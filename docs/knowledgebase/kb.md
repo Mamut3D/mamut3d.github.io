@@ -9,15 +9,18 @@ title:  "Personal KB"
 
 * [Termux](#termux)
 * [Bashrc](#bashrc)
+* [Bash](#bash)
 * [Vim](#vim)
 	* [Spell checking](#spell-checking)
 	* [TOC plugin for MD files](#toc-plugin-for-md-files)
+	* [Random tips](#random-tips)
 * [Python](#python)
 * [Termux](#termux-1)
 * [gcloud](#gcloud)
 	* [gcloud desktop experience](#gcloud-desktop-experience)
 * [Hex editor](#hex-editor)
 * [GitHub pages links](#github-pages-links)
+* [Exiftool](#exiftool)
 
 <!-- vim-markdown-toc -->
 
@@ -44,7 +47,8 @@ pkg install -y bash-completion \
 	       openssh \
 	       vim \
 	       termux-api \
-	       python
+	       python \
+	       exiftool
 
 # Gen new ssh key (if you don't have old one)
 ssh-keygen -t ed2551
@@ -77,7 +81,21 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
+# set default editor in bash to vim
+EDITOR=vim
+
 EOF
+```
+
+## Bash
+
+How to edit current command in text editor (based on $EDITOR env variable)
+
+```console
+$ random command
+
+# Press CTRL+x CTRL+e
+# to open the command in text editor
 ```
 
 ## Vim
@@ -124,6 +142,8 @@ Plug 'mzlogin/vim-markdown-toc'
 " Initialize plugin system
 call plug#end()
 
+" enable spell check
+set spell
 EOF
 ```
 
@@ -171,6 +191,14 @@ $ vim
 
 # Open some md file in vim and generate TOC
 :GenTocGFM
+```
+
+### Random tips
+
+- Disable word highlight after searching in vim via `/regexp`
+
+```console
+:noh
 ```
 
 ## Python
@@ -307,3 +335,21 @@ vim <Filename>
   - Test locally on termux requires fix at `vim /data/data/com.termux/files/usr/lib/ruby/gems/3.1.0/gems/jekyll-3.9.2/lib/jekyll/utils/platforms.rb` according to <https://github.com/jekyll/jekyll/issues/7045>
   - also one more fix all ready present in this repo Gemfile <https://github.com/jekyll/jekyll/issues/8523>
   - serve pages locally `bundle exec jekyll serve --host 0.0.0.0.`
+
+## Exiftool
+
+Exiftool is a cli tool for viewing and editing of file metadata. My typical use case is to view metadata of photos and remove them before publishing online to get rid of GPS coordinates when required.
+
+```bash
+# install exiftool for termux
+pkg install exiftool
+
+# view metadata for <file>
+exiftool <file>
+
+# remove the metadata from file backing up original <file> to <file>_original
+exiftool -all= <file>
+
+# remove the metadata from <file> in place
+exiftool -overwrite_original -all= <file>
+```
