@@ -15,9 +15,11 @@ title:  "Personal KB"
 	* [TOC plugin for MD files](#toc-plugin-for-md-files)
 	* [Random tips](#random-tips)
 * [Python](#python)
+	* [Simle python webserver](#simle-python-webserver)
 * [Termux](#termux-1)
 * [gcloud](#gcloud)
 	* [gcloud desktop experience](#gcloud-desktop-experience)
+	* [Minikube using ansible](#minikube-using-ansible)
 * [Hex editor](#hex-editor)
 * [GitHub pages links](#github-pages-links)
 * [Exiftool](#exiftool)
@@ -205,6 +207,12 @@ $ vim
 
 TODO console autocomplete
 
+### Simle python webserver
+
+```bash
+python -m http.server 8080
+```
+
 ## Termux
 
 ```bash
@@ -309,6 +317,27 @@ vncserver -localhost
 # Stop vnc server
 vncserver -kill :1
 
+```
+
+### Minikube using ansible
+
+Aim of this, is to create reusable k8s minikube cluster with ingress and argocd on gcloud from scratch as simple as possible
+
+```bash
+# Optionally start ssh agent to carry your locall ssh keys with you to gloud shell for github access
+eval `ssh-agent` && ssh-add
+
+# connect to gcloud shell vm + port forward 8080 to localhost just in case ;-)
+cloud cloud-shell ssh --ssh-flag=-L8080:127.0.0.1:8080 --ssh-flag=-oServerAliveInterval=30 --ssh-flag=-A
+
+# install ansible
+pip3 install ansible
+
+# download my github minikube-lab repo
+git clone git@github.com:Mamut3D/minikube-lab.git
+
+# apply playbooks on localhost
+ansible-playbook playbooks/prep.yml && ansible-playbook playbooks/setup.yml
 ```
 
 ## Hex editor
