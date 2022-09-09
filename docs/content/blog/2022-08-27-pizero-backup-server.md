@@ -2,7 +2,7 @@
 layout: post
 title:  "PiZero backup server"
 date:   2022-08-27 12:00:00 +0100
-categories: general
+weight: 3
 ---
 
 <!-- vim-markdown-toc GFM -->
@@ -43,9 +43,9 @@ The things don't like about cloud services:
 Pricing for my needs ~250GB:
 
 - Google cloud is 100euro/year
-  ![Google drive pricing 08.27.2022](/assets/posts/2022-08-27-pizero-storage-server/googledrive.jpg)
+  ![Google drive pricing 08.27.2022](/blog/2022-08-27-pizero-storage-server/googledrive.jpg)
 - OneDrive is 70euro/year
-  ![OneDrive pricing 08.27.2022](/assets/posts/2022-08-27-pizero-storage-server/onedrive.jpg)
+  ![OneDrive pricing 08.27.2022](/blog/2022-08-27-pizero-storage-server/onedrive.jpg)
 
 > [Azure S3 Glacier](https://aws.amazon.com/s3/storage-classes/glacier/) seems like a good fit. I am considering it now as a third locality. But I need to test it, mainly the data recovery process and price. From my basic calculations 250GB should cost ~5USD per year when using S3 Glacier Deep Archive which is more than reasonable. This [blog post](https://betterdev.blog/personal-backup-to-amazon-s3/) seems like a good starting point.
 
@@ -61,7 +61,7 @@ Local NAS might be good fit for somebody who wants to share movies or photos aro
 
 ## The solution
 
-![PiZero storage server](/assets/posts/2022-08-27-pizero-storage-server/server.jpg)
+![PiZero storage server](/blog/2022-08-27-pizero-storage-server/server.jpg)
 
 I wanted to use my already owned unused resources:
 
@@ -79,7 +79,7 @@ The problems that I had to tackle along the route:
 - My parents internet provider does not provide public IP (IPv4 nor IPv6).
   - I was not able to connect to my Pi from the Internet. Internet provider prices the public IP at 10euros/month ... Jeez...
   - The solution was to use some kind of VPN service. I have selected [ZeroTier One](https://www.zerotier.com). ZeroTier provides a free VPN for personal use for up to 25 devices and through [hole punching](https://en.wikipedia.org/wiki/UDP_hole_punching) gets around the no public IP issue. Also they have a client for the Pi and Android.
-  ![ZeroTier pricing 08.27.2022](/assets/posts/2022-08-27-pizero-storage-server/zerotier.jpg)
+  ![ZeroTier pricing 08.27.2022](/blog/2022-08-27-pizero-storage-server/zerotier.jpg)
 - power the external hard drive
   - Although the HDD was able to run from the Pi data port, after some time it stopped to work. I think it was due to some power spike or something.
   - The solution was to use [externally powered USB hub](https://www.alza.sk/axagon-hue-msa-switch-hub-usb-a-metal-d6588596.htm) for 15euro
@@ -129,7 +129,7 @@ The problems that I had to tackle along the route:
 
 - Power consumption
   - I wanted to know how much electricity will the setup consume over a year and how much it will cost. The server will run most of the year doing nothing, disc not spinning and waiting for ssh connection. I have connected the Pi to the 5.2V power brick with V/A display on the picture below.
-  ![PiZero storage server current consumption](/assets/posts/2022-08-27-pizero-storage-server/server-consumption.jpg)
+  ![PiZero storage server current consumption](/blog/2022-08-27-pizero-storage-server/server-consumption.jpg)
   - Setup consumes in Idle state ~0.27A, and around 0.6A when actively receiving data
   - Yearly consumption
     - 5.2 * 0.27 * 24 * 365 / 1000 = 12.299 kW/h
