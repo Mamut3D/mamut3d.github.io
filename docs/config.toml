@@ -3,5 +3,22 @@ languageCode = 'en-us'
 title = 'Hope Harder'
 theme = 'relearn'
 [params]
+  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
+  # Useful to give opportunity to people to create merge request for your doc.
+  # See the config.toml file from this documentation site to have an example.
+  editURL = ""
+  # Author of the site, will be used in meta information
+  author = "Mamut3D"
+  # Description of the site, will be used in meta information
+  description = "Personal knowledgebase and blog of Mamut3D."
+  # If set to false, a Home button will appear below the search bar on the menu.
+  # It is redirecting to the landing page of the current language if specified. (Default is "/")
+  disableLandingPageButton = true
   # Change default color scheme with a variant one.
-    themeVariant = [ "relearn-dark", "relearn-light" ]
+  themeVariant = [ "relearn-dark", "relearn-light" ]
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/Mamut3D/mamut3d.github.io"
+weight = 10
