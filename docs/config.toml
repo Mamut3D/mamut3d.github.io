@@ -22,3 +22,6 @@ name = "<i class='fab fa-github'></i> Github repo"
 identifier = "ds"
 url = "https://github.com/Mamut3D/mamut3d.github.io"
 weight = 10
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
