@@ -1,0 +1,8 @@
+---
+# Linux terminal configuration based on personal preferences
+- hosts: localhost
+  gather_facts: false
+  roles:
+    - { role: bashrc, tags: ps1,  bashrc_action: PS1 }
+    - { role: bashrc, tags: ps1,  bashrc_action: history }
+    - { role: bashrc, tags: ps1,  bashrc_action: editor }

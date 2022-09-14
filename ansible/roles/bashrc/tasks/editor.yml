@@ -1,0 +1,7 @@
+---
+- name: "bashrc action: '{{ bashrc_action }}'"
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ bashrc_action }}"
+    block: |
+      EDITOR=vim
