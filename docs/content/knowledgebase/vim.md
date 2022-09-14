@@ -50,6 +50,9 @@ call plug#end()
 
 " enable spell check
 set spell
+
+" Disable netrw help header
+let g:netrw_banner=0
 EOF
 ```
 
