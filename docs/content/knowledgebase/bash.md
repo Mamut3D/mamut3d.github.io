@@ -6,8 +6,10 @@ title = "Bash"
 
 Random bashrc stuff, review bashrc before using since it overrides everything
 
+> Note: Configuration from this KB can be applied through [this](https://github.com/Mamut3D/mamut3d.github.io/blob/main/ansible/playbooks/personal_config.yml) Ansible playbook.
+
 ``` bash
-cat << EOF > ~/.bashrc
+cat ~/.bashrc
 # Show git branch on PS1
 # Origin: https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
 parse_git_branch() {
@@ -31,8 +33,6 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # set default editor in bash to vim
 EDITOR=vim
-
-EOF
 ```
 
 ## Edit command in editor

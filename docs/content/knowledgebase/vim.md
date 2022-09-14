@@ -4,6 +4,8 @@ title = "Vim"
 
 Tips and tricks for Vim configuration and life with vim.
 
+> Note: Configuration from this KB can be applied through [this](https://github.com/Mamut3D/mamut3d.github.io/blob/main/ansible/playbooks/personal_config.yml) Ansible playbook.
+
 ## Config
 
 - prepare folders for spellcheck
@@ -15,7 +17,7 @@ mkdir -p ~/.vim/spell
 - configure vim
 
 ```bash
-cat << EOF > ~/.vimrc
+cat ~/.vimrc
 " Disable mouse select
 set mouse-=a
 " Copy paste maybe TODO in termux https://ibnishak.github.io/blog/post/copy-to-termux-clip/
@@ -48,12 +50,11 @@ Plug 'mzlogin/vim-markdown-toc'
 " Initialize plugin system
 call plug#end()
 
-" enable spell check
-set spell
+" enable spell check for markdown files
+autocmd FileType markdown setlocal spell
 
 " Disable netrw help header
 let g:netrw_banner=0
-EOF
 ```
 
 ## Spell checking

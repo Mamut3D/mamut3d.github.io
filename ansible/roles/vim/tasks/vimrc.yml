@@ -1,0 +1,6 @@
+---
+- name: "vim action: '{{ vim_action }}'"
+  ansible.builtin.template:
+    src: '.vimrc.j2'
+    dest: "$HOME/.vimrc"
+    mode: '0600'

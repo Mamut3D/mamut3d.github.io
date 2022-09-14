@@ -1,0 +1,9 @@
+---
+- name: "vim action: '{{ vim_action }}'"
+  ansible.builtin.file:
+    path: "$HOME/{{item}}"
+    state: directory
+    mode: '0700'
+  loop:
+    - '.vim'
+    - '.vim/spell'
