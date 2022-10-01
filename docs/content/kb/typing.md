@@ -16,7 +16,7 @@ wpm
 
 ## Single hand practice
 
-To practice single hand typing you need a list of words for single hands and import it to wpm ideally as json. In this repo there is a simple python script which can generate a wpm file for a hand of your choice pre-filled with
+To practice single hand typing you need a list of words for single hands and import it to wpm ideally as json. In this repo there is a simple python script which can generate a wpm file for a hand of your choice pre-filled with a database of words for each hand.
 
 ```bash
 # write out help from script
