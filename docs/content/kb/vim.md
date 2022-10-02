@@ -46,6 +46,7 @@ set spellfile=~/.vim/spell/en.utf-8.add
 call plug#begin('~/.vim/plugged')
 
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'davidhalter/jedi-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -101,6 +102,28 @@ $ vim
 
 # Open some md file in vim and generate TOC
 :GenTocGFM
+```
+
+## Python autocomplete
+
+So far I am testing [jedi-vim](https://github.com/davidhalter/jedi-vim) plugin. I found another blog post how to do this in Termux [here](https://hax4us.github.io/2020-07-12-install-jedi-vim-termux/).
+
+```console
+# Install Termux package to add python3 support for vim
+pkg install vim-python
+
+# Download required git repo
+$ git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+
+# Ensure us use Plug for vim plugins and have jedi-vim defined in ~/.vimrc
+$ cat ~/.vimrca
+...
+Plug 'davidhalter/jedi-vim'
+...
+
+# Start vim and install plugins defined in ~/.vimrc
+$ vim
+:PlugInstall
 ```
 
 ## Random tips
