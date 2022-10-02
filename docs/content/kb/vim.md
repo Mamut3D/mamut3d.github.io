@@ -56,6 +56,13 @@ autocmd FileType markdown setlocal spell
 
 " Disable netrw help header
 let g:netrw_banner=0
+
+" jedi-vim config
+" disable automatic autodot extension, use <CTRL>+<Space>
+let jedi#popup_on_dot=0
+
+" disable function call signature
+let g:jedi#show_call_signatures=0
 ```
 
 ## Spell checking

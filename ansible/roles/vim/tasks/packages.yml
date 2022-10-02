@@ -1,0 +1,10 @@
+---
+# Ensure vim packages are installed
+- name: "vim action: '{{ vim_action }}'"
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - vim
+    - vim-python
+  become: false
