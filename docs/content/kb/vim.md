@@ -174,3 +174,4 @@ Key shortcuts to use netrw - vim's directory browser.
 - `d` - create directory
 - `D` - delete current file
 - `%` - create new file
+- `R``- rename current file

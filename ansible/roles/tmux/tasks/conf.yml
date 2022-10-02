@@ -1,0 +1,6 @@
+---
+- name: "tmux action: '{{ tmux_action }}'"
+  ansible.builtin.template:
+    src: '.tmux.conf.j2'
+    dest: "$HOME/.tmux.conf"
+    mode: '0600'

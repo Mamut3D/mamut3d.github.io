@@ -10,3 +10,5 @@
     # Vim
     - { role: vim,    tags: [vim,spell],      vim_action: spell }
     - { role: vim,    tags: [vim,vimrc],      vim_action: vimrc }
+    # Tmux
+    - { role: tmux,   tags: [tmux,tmux-conf], tmux_action: conf }
