@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ python_action }}.yml"

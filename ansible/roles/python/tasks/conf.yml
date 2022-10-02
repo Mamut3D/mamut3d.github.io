@@ -1,0 +1,6 @@
+---
+- name: "python action: '{{ python_action }}'"
+  ansible.builtin.template:
+    src: '.pythonrc.j2'
+    dest: "$HOME/.pythonrc"
+    mode: '0600'
