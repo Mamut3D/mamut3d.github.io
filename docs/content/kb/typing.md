@@ -20,10 +20,10 @@ To practice single hand typing you need a list of words for single hands and imp
 
 ```bash
 # write out help from script
-./python/wmp_single_hand_gen.py -h
+./python/wpm_single_hand_gen.py -h
 
 # generate right hand file for wpm
-./python/wmp_single_hand_gen.py -H right > right.json
+./python/wpm_single_hand_gen.py -H right > right.json
 
 # use right hand file with wpm
 wpm --load-json right.json
