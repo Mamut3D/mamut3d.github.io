@@ -22,6 +22,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " point to additional words for spellchecking
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" improve autocomplete behavior based on https://vim.fandom.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+set completeopt=longest,menuone
 
 call plug#begin('~/.vim/plugged')
 
@@ -37,9 +39,16 @@ autocmd FileType markdown setlocal spell
 " Disable netrw help header
 let g:netrw_banner=0
 
+""" Python stuff start
+
 " jedi-vim config
 " disable automatic autodot extension, use <CTRL>+<Space>
 let jedi#popup_on_dot=0
 
-" disable function call signature
-let g:jedi#show_call_signatures=0
+" configure function call signature
+let g:jedi#show_call_signatures=1
+
+" use tabs for showing Pydoc
+let g:jedi#use_tabs_not_buffers = 1
+
+""" Python stuff end

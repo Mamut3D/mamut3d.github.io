@@ -42,6 +42,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " point to additional words for spellchecking
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" improve autocomplete behavior based on https://vim.fandom.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+
 " enable vim-plugin
 call plug#begin('~/.vim/plugged')
 
@@ -57,12 +59,19 @@ autocmd FileType markdown setlocal spell
 " Disable netrw help header
 let g:netrw_banner=0
 
+""" Python stuff start
+
 " jedi-vim config
 " disable automatic autodot extension, use <CTRL>+<Space>
 let jedi#popup_on_dot=0
 
-" disable function call signature
-let g:jedi#show_call_signatures=0
+" configure function call signature
+let g:jedi#show_call_signatures=1
+
+" use tabs for showing Pydoc
+let g:jedi#use_tabs_not_buffers = 1
+
+""" Python stuff end
 ```
 
 ## Spell checking
@@ -111,6 +120,13 @@ $ vim
 :GenTocGFM
 ```
 
+## Autocomplete
+
+- `<CTRL>+p` - show autocomplete options
+  - `<CTRL>+p` - cycle back in autocomplete options
+  - `<CTR>+n` - cycle forward in autocomplete options
+  - `<CTR>+y` - select from autocomplete options
+
 ## Python autocomplete
 
 So far I am testing [jedi-vim](https://github.com/davidhalter/jedi-vim) plugin. I found another blog post how to do this in Termux [here](https://hax4us.github.io/2020-07-12-install-jedi-vim-termux/).
@@ -132,6 +148,16 @@ Plug 'davidhalter/jedi-vim'
 $ vim
 :PlugInstall
 ```
+### Jedi-vim shortcuts
+
+Keyboard shortcuts:
+
+> <leader> key in vim is `\` by default
+
+- `<C-Space>` - Autocomplete
+- `<leader>d` - Goto definition
+- `K` - Show Documentation/Pydoc
+- `<leader>r` - rename
 
 ## Random tips
 
