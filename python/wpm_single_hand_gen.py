@@ -4,6 +4,7 @@
 import random
 import json
 import argparse
+import sys
 
 parser = argparse.ArgumentParser(description="Generator of randomized lessons for python wpm package. Lessons are generated for each hand separately",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -59,10 +60,14 @@ left_hand_words = [
     'dressed', 'created', 'waver', 'qat', 'wrest', 'axes', 'waves', 'red', 'tea'
 ]
 
-seed = left_hand_words
-if args.hand == 'right':
+if args.hand == 'left':
+    if len(left_hand_words) < args.word_count:
+        sys.exit('Number of left hand words selected for permutatios must be lower or equal to ' + str(len(left_hand_words)))
+    seed = left_hand_words
+else:
+    if len(right_hand_words) < args.word_count:
+        sys.exit('Number of right hand words selected for permutatios must be lower or equal to ' + str(len(right_hand_words)))
     seed = right_hand_words
-
 result = []
 
 for i in range(args.permutations):
