@@ -41,7 +41,7 @@ right_hand_words = [
     'yolky', 'yomim', 'youpon', 'yummy', 'yupon'
 ]
 left_hand_words = [
-    'Edgar', 'strawberry', 'rest', 'baste', 'sarge', 'badger', 'dab', 'bad', 'brew',
+    'Edgar', 'rest', 'baste', 'sarge', 'badger', 'dab', 'bad', 'brew',
     'brave', 'bear', 'ted', 'fade', 'vested', 'trade', 'sax', 'rear', 'reader',
     'read', 'sad', 'grade', 'crew', 'start', 'caste', 'cast', 'straw', 'taser',
     'wax', 'sweater', 'swear', 'date', 'database', 'retested', 'assert', 'asserted', 'adverse',
