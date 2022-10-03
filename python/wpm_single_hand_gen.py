@@ -76,7 +76,7 @@ class WPMGen:
         return result
 
 def main():
-    parser = argparse.ArgumentParser(description="Generator of randomized lessons for python wpm package.
+    parser = argparse.ArgumentParser(description="Generator of randomized lessons for python wpm package. \
                                      Lessons are generated for each hand separately",
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-w", "--word-count", type=int, default=100,
