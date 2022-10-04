@@ -65,6 +65,21 @@ q
 
 ```
 
+## Auto-generate imports
+
+Tool used is [pyflyby](https://github.com/deshaw/pyflyby) and content is taken from [here](https://waylonwalker.com/pyflyby/).
+
+- installation: `pip3 install pyflyby`
+- basic usage: `tidy-imports <filename>.py`
+- vim on-save:
+  ```console
+  cat ~/.vimrc
+  ...
+  " autogenerate import for python files on save
+  autocmd bufwritepost *.py execute  "silent !tidy-imports --quiet --replace-star-imports --action REPLACE " . bufname("%")
+  ...
+  ```
+
 ## Simple web server
 
 ```bash
