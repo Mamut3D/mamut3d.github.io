@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 # importing random module
-import random
-import json
 import argparse
+import json
+import random
 import sys
 
 class WPMGen:
