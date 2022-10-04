@@ -1,0 +1,4 @@
+---
+- name: "python action: '{{ python_action }}'"
+  ansible.builtin.pip:
+    name: pyflyby
