@@ -2,9 +2,39 @@
   // Keyboad shortcuts
   // So far quick and dirty, but it will be improved ;-)
   document.addEventListener('keyup', (e) => {
+    if (document.activeElement != document.getElementById("search-by")) {
+      // show keyboard shortcut info on 'i' keypress
+      if (e.key.toLowerCase() === 'i') {
+        alert(
+"Keyboard shortcuts: \n\n \
+i  -  this keyboard shortcut info \n \
+/  -  focus search bar \n \
+h  -  navigate on previous page \n \
+l  -  navigate on next page \n \
+j  -  scroll down \n \
+alt + j  -  scroll down big\n \
+k  -  scroll up \n \
+alt + k  -  scroll up big"
+        );
+      }
+      // focus search on '/' key
       if (e.key.toLowerCase() === '/') {
           //alert('/ key pressed');
-	  document.getElementById("search-by").focus();
+          document.getElementById("search-by").focus();
       }
+      // vim style keys
+      // navigate to following page on 'l' key
+      if (e.key.toLowerCase() === 'l') {
+        jQuery('a.nav-next').click();
+      }
+      // navigate to previous page on 'h' key
+      if (e.key.toLowerCase() === 'h') {
+        jQuery('a.nav-prev').click();
+      }
+
+      // scroll up and down via 'j' and 'k' was hacked in
+      // static/js/perfect-scrollbar.min.js
+      // static/js/theme.js
+    }
   });
 </script>
