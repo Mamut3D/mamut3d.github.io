@@ -12,6 +12,7 @@ weight: 3
 	* [Local NAS](#local-nas)
 * [The solution](#the-solution)
 * [The summary](#the-summary)
+* [2022.07.10 update](#20220710-update)
 
 <!-- vim-markdown-toc -->
 
@@ -156,3 +157,10 @@ The problems that I had to tackle along the route:
 ## The summary
 
 I am quite happy with the result. For a long time I was unable to find a reasonable use case for my Raspberry Pi which was just lying around doing nothing (this seems to be the case for many of my friends and colleagues with Pi). I have learned a thing or two along the way and obtained some reasonably priced backup locality.
+
+## 2022.07.10 update
+
+Well in the end I was not able to solve the issue with ZeroTier disconnecting on Android after random amount of time. This was especially annoying when I was trying to upload some larger backups. I have switched to similar service - [Tailscale](https://tailscale.com).
+
+Tailscale is build on top of  WireGuard and has clients for Android, Pi, Window and Mac... They also generously provide free tier for single admin with up to 20 devices which is awesome. I was able to deploy the solution on my remote RPi Zero through ssh using ZeroTier and all went fine. Currently I have kept ZeroTier and Tailscale running next to each other.
+Tailscale client works as expected on Android and they even provide Android Quick Setting button which is a really nice touch.
