@@ -20,6 +20,8 @@ alt + k  -  scroll up big"
       // focus search on '/' key
       if (e.key.toLowerCase() === '/') {
           //alert('/ key pressed');
+	  //show naviagation bar (important on mobile)
+	  showNav();
           document.getElementById("search-by").focus();
       }
       // vim style keys
