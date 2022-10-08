@@ -31,7 +31,16 @@ document.addEventListener('keyup', (e) => {
     // show keyboard shortcut info on 'i' keypress
     if (e.key.toLowerCase() === 'i') {
       alert(
-"Keyboard shortcuts: \n\n \                                                                           i  -  this keyboard shortcut info \n \                                                                /  -  focus search bar \n \                                                                           f  -  fullscrean (F11 on Android don't work) \n \                                                     h  -  navigate on previous page \n \                                                                  l  -  navigate on next page \n \                                                                      j  -  scroll down \n \                                                                                alt + j  -  scroll down big\n \                                                                       k  -  scroll up \n \                                                                                  alt + k  -  scroll up big"
+"Keyboard shortcuts: \n\n \
+i  -  this keyboard shortcut info \n \
+/  -  focus search bar \n \
+f  -  fullscrean (F11 on Android don't work) \n \
+h  -  navigate on previous page \n \
+l  -  navigate on next page \n \
+j  -  scroll down \n \
+alt + j  -  scroll down big\n \
+k  -  scroll up \n \
+alt + k  -  scroll up big"
       );
     }
     // focus search on '/' key
