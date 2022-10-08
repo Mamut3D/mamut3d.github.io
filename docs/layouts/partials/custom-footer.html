@@ -46,10 +46,14 @@ alt + k  -  scroll up big"
       }
       // focus search on '/' key
       if (e.key.toLowerCase() === '/') {
-          //alert('/ key pressed');
-	  //show naviagation bar (important on mobile)
-	  showNav();
-          document.getElementById("search-by").focus();
+        //alert('/ key pressed');
+        // show naviagation bar (important on mobile)
+        var b = document.querySelector( 'body' );
+        // run show menu toggle only when hidden
+        if( !b.classList.contains( 'sidebar-flyout' ) ) {
+          showNav();
+        }
+        document.getElementById("search-by").focus();
       }
       // vim style keys
       // navigate to following page on 'l' key
