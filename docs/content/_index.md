@@ -5,6 +5,10 @@ title = "Hope Harder"
 
 ![Our lord and savior Doge.](/images/doge_avatar_large.png)
 
+{{% notice style="info" %}}
+You can now use custom Vim like keyboard shortcuts to navigate this page. Press `i` for info.
+{{% /notice %}}
+
 This is a home page of random devops engineer which serves as a knowledgebase and a blog.
 
 My interest are:
