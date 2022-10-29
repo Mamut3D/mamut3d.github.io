@@ -176,4 +176,11 @@ Key shortcuts to use netrw - vim's directory browser.
 - `d` - create directory
 - `D` - delete current file
 - `%` - create new file
-- `R``- rename current file
+- `R` - rename current file
+
+## Insert mode tips
+
+- exit insert mode: `CTRL` + `[`
+## Where to go next
+
+- [Insert mode tips](https://dev.to/iggredible/the-only-vim-insert-mode-cheatsheet-you-ever-needed-nk9)

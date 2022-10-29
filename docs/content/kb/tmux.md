@@ -15,4 +15,13 @@ title = "Tmux"
   bind l select-pane -R
   ```
 
+## Tmux tips
 
+- hide/show status bar (useful on small screens :-))
+  ```bash
+  # use <CTRL+B> before inputting commands
+
+  # hide tmux status bar for current session
+  :set status off
+  ```
+- show time: `CTRL` + `B` then `T`
