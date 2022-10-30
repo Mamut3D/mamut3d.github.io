@@ -40,7 +40,9 @@ l  -  navigate on next page \n \
 j  -  scroll down \n \
 alt + j  -  scroll down big\n \
 k  -  scroll up \n \
-alt + k  -  scroll up big"
+alt + k  -  scroll up big \n \
+g  -  scroll to the top \n \
+G  -  scroll to the end"
       );
     }
     // focus search on '/' key
