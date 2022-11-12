@@ -31,3 +31,12 @@ pkg install -y bash-completion \
 ssh-keygen -t ed2551
 ```
 
+## Tips
+
+- Copy/open url links from Termux
+
+  ```console
+  CTRL+shift+m
+  > Select URL
+  > enter(short press copy / long open in browser)
+  ```
