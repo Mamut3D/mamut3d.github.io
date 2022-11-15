@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'davidhalter/jedi-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Initialize plugin system
 call plug#end()
@@ -54,3 +55,6 @@ let g:jedi#use_tabs_not_buffers = 1
 " autogenerate import for python files on save
 autocmd bufwritepost *.py execute  "silent !tidy-imports --quiet --replace-star-imports --action REPLACE " . bufname("%")
 """ Python stuff end
+
+""" GO stuff start
+""" GO stuff end
