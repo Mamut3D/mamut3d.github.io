@@ -15,6 +15,12 @@ title = "Tmux"
   bind l select-pane -R
   ```
 
+- configure Tmux to hide status bar by default
+  ```console
+  $ cat ~/.tmux.conf
+  set -g status off
+  ```
+
 ## Tmux tips
 
 - hide/show status bar (useful on small screens :-))
