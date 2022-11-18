@@ -4,16 +4,16 @@
   gather_facts: false
   roles:
     # bashrc
-    - { role: bashrc, tags: [bashrc,ps1],        bashrc_action: PS1 }
-    - { role: bashrc, tags: [bashrc,history],    bashrc_action: history }
-    - { role: bashrc, tags: [bashrc,editor] ,    bashrc_action: editor }
+    - { role: bashrc,   tags: [bashrc,ps1],             bashrc_action: PS1 }
+    - { role: bashrc,   tags: [bashrc,history],         bashrc_action: history }
+    - { role: bashrc,   tags: [bashrc,editor] ,         bashrc_action: editor }
     # Vim
-    - { role: vim,    tags: [vim,spell],         vim_action: spell }
-    - { role: vim,    tags: [vim,vimrc],         vim_action: vimrc }
+    - { role: vim,      tags: [vim,spell],              vim_action: spell }
+    - { role: vim,      tags: [vim,vimrc],              vim_action: vimrc }
     # Tmux
-    - { role: tmux,   tags: [tmux,tmux-conf],    tmux_action: conf }
+    - { role: tmux,     tags: [tmux,tmux-conf],         tmux_action: conf }
     # Python
-    - { role: python, tags: [python,py-conf],    python_action: conf }
-    - { role: python, tags: [python,pypackages], python_action: packages }
+    - { role: python,   tags: [python,py-conf],         python_action: conf }
+    - { role: python,   tags: [python,pypackages],      python_action: packages }
     # Newsboat
     - { role: newsboat, tags: [newsboat,newsboat-conf], newsboat_action: conf }
