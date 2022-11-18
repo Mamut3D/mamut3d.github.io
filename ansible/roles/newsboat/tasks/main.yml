@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ newsboat_action }}.yml"

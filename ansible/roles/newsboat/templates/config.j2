@@ -1,0 +1,27 @@
+# Quality of life stuff
+refresh-on-startup yes
+show-read-feeds no
+show-read-articles no
+
+# Open browser articles in browser called from termux
+browser "termux-open-url %u"
+
+# unbind keys
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+bind-key H prev-feed
+bind-key L next-feed
+
+# bind keys - show read feeds with keybind
+bind-key r toggle-show-read-feeds
+
+# List article name only due to screen size
+articlelist-format "%t"

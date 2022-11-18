@@ -1,0 +1,6 @@
+---
+- name: "newsboat action: '{{ newsboat_action }}'"
+  ansible.builtin.template:
+    src: 'config.j2'
+    dest: "$HOME/.newsboat/config"
+    mode: '0600'
