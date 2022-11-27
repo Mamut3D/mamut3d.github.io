@@ -30,12 +30,14 @@ unbind-key K
 bind-key j down
 bind-key k up
 bind-key l open
+bind-key RIGHT open
 bind-key h quit
+bind-key LEFT quit
 bind-key H prev-feed
 bind-key L next-feed
 
 # bind keys - show read feeds with keybind
-bind-key r toggle-show-read-feeds
+bind-key R toggle-show-read-feeds
 
 # List article name only due to screen size
 articlelist-format "%t"
