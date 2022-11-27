@@ -1,0 +1,9 @@
+---
+- name: "termux action: '{{ termux_action }}'"
+  ansible.builtin.template:
+    src: "{{ item }}.j2"
+    dest: "$HOME/.termux/{{ item }}"
+    mode: '0600'
+  loop:
+    - 'termux.properties'
+    - 'colors.properties'

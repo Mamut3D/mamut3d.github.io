@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ termux_action }}.yml"
