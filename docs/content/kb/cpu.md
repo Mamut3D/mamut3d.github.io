@@ -15,6 +15,6 @@ apt install hwloc
 lstopo --of png > cpu.png
 ```
 
-Export from gcloud shell VM (sadly no NUMA there as expected):
+Export from gcloud shell VM (sadly only single NUMA there as expected):
 
 ![Gcloud shell CPU visualisation](/kb/cpu/cpu.png)
