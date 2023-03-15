@@ -9,6 +9,11 @@ title = "Tmux"
 - configure Tmux to allow switching between panes using vim navigation keys.
   ```console
   $ cat ~/.tmux.conf
+  bind -r -T prefix C-h resize-pane -L
+  bind -r -T prefix C-j resize-pane -U
+  bind -r -T prefix C-k resize-pane -D
+  bind -r -T prefix C-l resize-pane -R
+
   bind h select-pane -L
   bind j select-pane -D
   bind k select-pane -U
