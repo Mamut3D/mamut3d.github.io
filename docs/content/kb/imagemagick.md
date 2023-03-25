@@ -8,7 +8,7 @@ title = "Imagemagick"
 ImageMagick is a free, open-source software suite, used for editing and manipulating digital images. It has lot of cli utilities bundled in. This page serves as a kb for ones, which I found useful.
 
 ```bash
-# install exiftool for termux
+# install imagemagick for termux
 pkg install imagemagick
 
 # rotate image
