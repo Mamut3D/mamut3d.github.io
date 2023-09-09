@@ -96,6 +96,9 @@ autocmd bufwritepost *.py execute  "silent !tidy-imports --quiet --replace-star-
 # Add word to local spell file (when hovering over misspelled word)
 zg
 
+# Remove word to local spell file (when hovering over word)
+zug
+
 # Select word from dictionary (when hovering over misspelled word)
 z=
 ```
@@ -167,6 +170,13 @@ Keyboard shortcuts:
 
 ```console
 :noh
+```
+
+- Open URL links in browser
+
+```console
+# Hower over url and press
+gx
 ```
 
 ## Netrw
