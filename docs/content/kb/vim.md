@@ -42,6 +42,22 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " point to additional words for spellchecking
 set spellfile=~/.vim/spell/en.utf-8.add
 
+" Set line moves with Ctrl +hjkl
+nnoremap <C-j> :m .+1<CR>
+nnoremap <C-k> :m .-2<CR>
+inoremap <C-j> <Esc>:m .+1<CR>gi
+inoremap <C-k> <Esc>:m .-2<CR>gi
+vnoremap <C-j> :m '>+1<CR>gv
+vnoremap <C-k> :m '<-2<CR>gv
+
+:set shiftwidth=1
+nnoremap <C-h> :<1<CR>
+nnoremap <C-l> :>1<CR>
+inoremap <C-h> <Esc>:<1<CR>gi
+inoremap <C-l> <Esc>:>1<CR>gi
+vnoremap <C-h> < gv
+vnoremap <C-l> > gv
+
 " improve autocomplete behavior based on https://vim.fandom.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
 
 " enable vim-plugin
