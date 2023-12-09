@@ -2,7 +2,7 @@ baseURL = 'https://mamut3d.github.io'
 languageCode = 'en-us'
 title = 'Hope Harder'
 theme = 'relearn'
-images = [ "/images/doge_avatar_large.png" ]
+images = [ "images/doge_avatar_large.png" ]
 [params]
   # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
   # Useful to give opportunity to people to create merge request for your doc.
