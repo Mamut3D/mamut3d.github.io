@@ -12,7 +12,7 @@ do
   if [[ "${suffix,,}"  == 'jpg' ]]
   then
     echo "Converting file '$filename'"
-    convert "$filename" -rotate 90 -resize 1072x1448 -colorspace Gray "$resultdir/${basename}.png"
+    convert "$filename" -strip -rotate 90 -resize 1072x1448 -colorspace Gray "$resultdir/${basename}.png"
   else
     echo "Ignoring file '$filename'"
   fi
