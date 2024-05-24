@@ -1,0 +1,11 @@
+pass: '{cipher}damn'
+root:
+  foot: one
+  boot: '{cipher}two'
+  thoughts:
+    - train
+    - rain
+    - fart
+  boo: []
+  ham:
+    nun: '{cipher}hell'
