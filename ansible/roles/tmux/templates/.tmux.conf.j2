@@ -1,4 +1,7 @@
 set -g status off
+
+setw -g mode-keys vi
+
 bind -r -T prefix C-h resize-pane -L
 bind -r -T prefix C-k resize-pane -U
 bind -r -T prefix C-j resize-pane -D
@@ -16,3 +19,10 @@ bind % split-window -h -c "#{pane_current_path}"
 
 # Increase buffer
 set-option -g history-limit 10000
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+#set -g @plugin 'schasse/tmux-jump'
+set -g @plugin 'wfxr/tmux-fzf-url'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
