@@ -41,17 +41,17 @@ inoremap <C-l> <Esc>:>1<CR>gi
 vnoremap <C-h> < gv
 vnoremap <C-l> > gv
 
-call plug#begin('~/.vim/plugged')
-
-Plug 'mzlogin/vim-markdown-toc'
-" Plug 'davidhalter/jedi-vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" Initialize plugin system
-call plug#end()
+"call plug#begin('~/.vim/plugged')
+"
+"Plug 'mzlogin/vim-markdown-toc'
+"" Plug 'davidhalter/jedi-vim'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"
+"" Initialize plugin system
+"call plug#end()
 
 " enable spell check for markdown files
 autocmd FileType markdown setlocal spell

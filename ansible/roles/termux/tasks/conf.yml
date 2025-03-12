@@ -1,4 +1,10 @@
 ---
+- name: "termux action: '{{ termux_action }}' - ensure dir"
+  ansible.builtin.file:
+    path: "$HOME/.termux"
+    state: directory
+    mode: '0700'
+
 - name: "termux action: '{{ termux_action }}'"
   ansible.builtin.template:
     src: "{{ item }}.j2"

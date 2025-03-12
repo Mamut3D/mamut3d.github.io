@@ -18,4 +18,4 @@
     - { role: python,   tags: [python,py-conf],         python_action: conf }
     - { role: python,   tags: [python,pypackages],      python_action: packages }
     # Newsboat
-    - { role: newsboat, tags: [newsboat,newsboat-conf], newsboat_action: conf }
+#    - { role: newsboat, tags: [newsboat,newsboat-conf], newsboat_action: conf }
