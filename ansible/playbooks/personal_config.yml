@@ -3,23 +3,16 @@
 - hosts: localhost
   gather_facts: false
   roles:
-    # Git
-    - { role: git,   tags: [git],                       app_actions: [packages] }
-    # Termux
-    - { role: termux,   tags: [termux,config],          termux_action: conf }
-    # bash
-    - { role: bash,     tags: [bash],                   app_actions: [packages,PS1,history,editor] }
-    # Vim
-    - { role: vim,      tags: [vim,spell],              vim_action: spell }
-    - { role: vim,      tags: [vim,vimrc],              vim_action: vimrc }
-    # Tmux
-    - { role: tmux,     tags: [tmux],                   tmux_action: packages }
-    - { role: tmux,     tags: [tmux],                   tmux_action: plugins }
-    - { role: tmux,     tags: [tmux,tmux-conf],         tmux_action: conf }
-    # Python
-    - { role: python,   tags: [python,py-conf],         python_action: conf }
-    - { role: python,   tags: [python,pypackages],      python_action: packages }
-    # Newsboat
-#    - { role: newsboat, tags: [newsboat,newsboat-conf], newsboat_action: conf }
-    - { role: zoxide,   tags: [zoxide],                 app_action: packages }
-    - { role: zoxide,   tags: [zoxide],                 app_action: conf }
+    - { role: git,      tags: [git],      app_actions: [packages] }
+    - { role: termux,   tags: [termux],   termux_action: conf }
+    - { role: bash,     tags: [bash],     app_actions: [packages,PS1,history,editor] }
+    - { role: vim,      tags: [vim],      vim_action: spell }
+    - { role: vim,      tags: [vim],      vim_action: vimrc }
+    - { role: tmux,     tags: [tmux],     tmux_action: packages }
+    - { role: tmux,     tags: [tmux],     tmux_action: plugins }
+    - { role: tmux,     tags: [tmux],     tmux_action: conf }
+    - { role: python,   tags: [python],   python_action: conf }
+    - { role: python,   tags: [python],   python_action: packages }
+#   - { role: newsboat, tags: [newsboat], newsboat_action: conf }
+    - { role: zoxide,   tags: [zoxide],   app_action: packages }
+    - { role: zoxide,   tags: [zoxide],   app_action: conf }
