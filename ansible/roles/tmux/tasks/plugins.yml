@@ -1,5 +1,16 @@
 - name: "{{ app_name }} action: '{{ app_action }}'"
   ansible.builtin.git:
+    repo: "{{ item.repo }}"
+    dest: ~/.tmux/plugins/{{ item.name }}
+    version: "{{ item.version }}"
+  loop:
+  - name: tpm
     repo: 'https://github.com/tmux-plugins/tpm'
     dest: ~/.tmux/plugins/tpm
     version: v3.1.0
+  - name: tmux-jump
+    repo: 'https://github.com/schasse/tmux-jump.git'
+    version: master
+  - name: tmux-fzf-url
+    repo: 'https://github.com/junegunn/tmux-fzf-url.git'
+    version: master
