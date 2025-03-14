@@ -14,6 +14,7 @@
     - { role: vim,      tags: [vim,vimrc],              vim_action: vimrc }
     # Tmux
     - { role: tmux,     tags: [tmux],                   tmux_action: packages }
+    - { role: tmux,     tags: [tmux],                   tmux_action: plugins }
     - { role: tmux,     tags: [tmux,tmux-conf],         tmux_action: conf }
     # Python
     - { role: python,   tags: [python,py-conf],         python_action: conf }

@@ -1,0 +1,3 @@
+- name: Reload tmux conf
+  ansible.builtin.command:
+    cmd: tmux source ~/.tmux.conf

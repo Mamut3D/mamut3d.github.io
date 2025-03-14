@@ -4,3 +4,5 @@
     src: '.tmux.conf.j2'
     dest: "$HOME/.tmux.conf"
     mode: '0600'
+  notify:
+  - Reload tmux conf
