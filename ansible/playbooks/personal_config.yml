@@ -4,6 +4,7 @@
   gather_facts: false
   roles:
     - { role: tools,    tags: [tools],    app_actions: [packages, bashrc] }
+    - { role: aichat,   tags: [aichat],   app_actions: [packages, conf, bashrc] }
     - { role: git,      tags: [git],      app_actions: [packages] }
     - { role: termux,   tags: [termux],   termux_action: conf }
     - { role: bash,     tags: [bash],     app_actions: [packages, PS1, history, editor] }

@@ -1,0 +1,28 @@
+- name: "{{ app_name }} action: '{{ app_action }}' - ensure dir"
+  ansible.builtin.file:
+    path: "$HOME/{{ item }}"
+    state: directory
+    mode: '0700'
+  loop:
+  - .config/aichat
+  - .config/aichat/roles
+
+- name: "{{ app_name }} action: '{{ app_action }}' - ensure role brief"
+  ansible.builtin.copy:
+    dest: "$HOME/.config/aichat/roles/brief.md"
+    content: "Be exact and extra brief. When code is requested, return only code."
+
+- name: "{{ app_name }} action: '{{ app_action }}'"
+  ansible.builtin.blockinfile:
+    path: "$HOME/.config/aichat/config.yaml"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ app_name }}-{{ app_action }}"
+    block: |
+      keybindings: vi
+      editor: vim
+      light_theme: true
+      save_session: false
+      model: openai:gpt-4o
+      ## Config example
+      # clients:
+      # - type: openai
+      #   api_key: <api-key-here>
