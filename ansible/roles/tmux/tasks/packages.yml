@@ -1,8 +1,5 @@
 # Ensure tmux packages are installed
 - name: "tmux action: '{{ tmux_action }}'"
-  ansible.builtin.apt:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - tmux
-  become: false
+  ansible.builtin.command:
+    cmd: pkg install tmux
+    creates: /data/data/com.termux/files/usr/bin/tmux
