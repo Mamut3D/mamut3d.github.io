@@ -1,8 +1,7 @@
----
-- name: "bashrc action: '{{ bashrc_action }}'"
+- name: "{{ app_name }} action: '{{ app_action }}'"
   ansible.builtin.blockinfile:
     path: ~/.bashrc
-    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ bashrc_action }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ app_name }}-{{ app_action }}"
     block: |
       # Show git branch on PS1
       # Origin: https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt

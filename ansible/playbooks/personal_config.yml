@@ -7,10 +7,8 @@
     - { role: git,   tags: [git],                       app_actions: [packages] }
     # Termux
     - { role: termux,   tags: [termux,config],          termux_action: conf }
-    # bashrc
-    - { role: bashrc,   tags: [bashrc,ps1],             bashrc_action: PS1 }
-    - { role: bashrc,   tags: [bashrc,history],         bashrc_action: history }
-    - { role: bashrc,   tags: [bashrc,editor] ,         bashrc_action: editor }
+    # bash
+    - { role: bash,     tags: [bash],                   app_actions: [PS1,history,editor] }
     # Vim
     - { role: vim,      tags: [vim,spell],              vim_action: spell }
     - { role: vim,      tags: [vim,vimrc],              vim_action: vimrc }
