@@ -1,0 +1,6 @@
+- name: "{{ app_name }} action: '{{ app_action }}'"
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ app_name }}"
+    block: |
+      eval "$(zoxide init bash)"

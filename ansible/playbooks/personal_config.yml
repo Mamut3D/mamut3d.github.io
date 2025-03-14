@@ -19,3 +19,5 @@
     - { role: python,   tags: [python,pypackages],      python_action: packages }
     # Newsboat
 #    - { role: newsboat, tags: [newsboat,newsboat-conf], newsboat_action: conf }
+    - { role: zoxide,   tags: [zoxide],                 app_action: packages }
+    - { role: zoxide,   tags: [zoxide],                 app_action: conf }

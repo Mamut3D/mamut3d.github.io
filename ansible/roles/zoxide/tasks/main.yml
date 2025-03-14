@@ -1,0 +1,2 @@
+---
+- include_tasks: "{{ app_action }}.yml"
