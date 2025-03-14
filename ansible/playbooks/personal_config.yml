@@ -8,9 +8,7 @@
     - { role: bash,     tags: [bash],     app_actions: [packages,PS1,history,editor] }
     - { role: vim,      tags: [vim],      vim_action: spell }
     - { role: vim,      tags: [vim],      vim_action: vimrc }
-    - { role: tmux,     tags: [tmux],     tmux_action: packages }
-    - { role: tmux,     tags: [tmux],     tmux_action: plugins }
-    - { role: tmux,     tags: [tmux],     tmux_action: conf }
+    - { role: tmux,     tags: [tmux],     app_actions: [packages, plugins, conf] }
     - { role: python,   tags: [python],   python_action: conf }
     - { role: python,   tags: [python],   python_action: packages }
 #   - { role: newsboat, tags: [newsboat], newsboat_action: conf }

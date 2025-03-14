@@ -1,5 +1,4 @@
----
-- name: "tmux action: '{{ tmux_action }}'"
+- name: "{{ app_name }} action: '{{ app_action }}'"
   ansible.builtin.template:
     src: '.tmux.conf.j2'
     dest: "$HOME/.tmux.conf"

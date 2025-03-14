@@ -1,4 +1,4 @@
-- name: Git checkout
+- name: "{{ app_name }} action: '{{ app_action }}'"
   ansible.builtin.git:
     repo: 'https://github.com/tmux-plugins/tpm'
     dest: ~/.tmux/plugins/tpm

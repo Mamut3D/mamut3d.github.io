@@ -1,2 +1,4 @@
----
-- include_tasks: "{{ tmux_action }}.yml"
+- include_tasks: "{{ app_action }}.yml"
+  loop_control:
+    loop_var: app_action
+  loop: "{{ app_actions }}"
