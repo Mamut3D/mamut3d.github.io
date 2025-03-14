@@ -8,7 +8,7 @@
     # Termux
     - { role: termux,   tags: [termux,config],          termux_action: conf }
     # bash
-    - { role: bash,     tags: [bash],                   app_actions: [PS1,history,editor] }
+    - { role: bash,     tags: [bash],                   app_actions: [packages,PS1,history,editor] }
     # Vim
     - { role: vim,      tags: [vim,spell],              vim_action: spell }
     - { role: vim,      tags: [vim,vimrc],              vim_action: vimrc }
