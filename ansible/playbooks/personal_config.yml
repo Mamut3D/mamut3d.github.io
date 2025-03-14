@@ -5,7 +5,7 @@
   roles:
     - { role: git,      tags: [git],      app_actions: [packages] }
     - { role: termux,   tags: [termux],   termux_action: conf }
-    - { role: bash,     tags: [bash],     app_actions: [packages,PS1,history,editor] }
+    - { role: bash,     tags: [bash],     app_actions: [packages, PS1, history, editor] }
     - { role: vim,      tags: [vim],      vim_action: spell }
     - { role: vim,      tags: [vim],      vim_action: vimrc }
     - { role: tmux,     tags: [tmux],     app_actions: [packages, plugins, conf] }
