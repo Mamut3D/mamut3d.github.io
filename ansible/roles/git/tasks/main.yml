@@ -1,0 +1,4 @@
+- include_tasks: "{{ current_app_action }}.yml"
+  loop_control:
+    loop_var: current_app_action
+  loop: "{{ app_actions }}"

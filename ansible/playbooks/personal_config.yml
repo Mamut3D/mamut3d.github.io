@@ -3,6 +3,8 @@
 - hosts: localhost
   gather_facts: false
   roles:
+    # Git
+    - { role: git,   tags: [git],                       app_actions: [packages] }
     # Termux
     - { role: termux,   tags: [termux,config],          termux_action: conf }
     # bashrc

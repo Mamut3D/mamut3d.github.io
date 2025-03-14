@@ -1,0 +1,7 @@
+# Ensure packages are installed
+- name: "{{ app_name }} action: '{{ app_action }}'"
+  ansible.builtin.command:
+    cmd: "pkg install {{ item }}"
+    creates: "/data/data/com.termux/files/usr/bin/{{ item }}"
+  loop:
+  - git
