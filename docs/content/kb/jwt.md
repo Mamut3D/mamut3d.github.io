@@ -18,5 +18,5 @@ JWT simple copy paste trick
 JWT prettify copy paste trick
 
 ```bash
- | cut -d "." -f 2 | base64 -d 2> /dev/null | sed 's/,/,\n/g'
+ | cut -d "." -f 2 | base64 -d 2> /dev/null | sed ';s/{/{\n/g;s/,/,\n/g;s/}/\n}\n/g'
 ```
